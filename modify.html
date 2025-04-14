@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimental Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="D:/2024research/ft/LLMSDF/css/all.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"> -->
+    <!-- <link href="D:/2024research/ft/LLMSDF/css/all.min.css" rel="stylesheet"> -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a56db',
+                        secondary: '#7c3aed'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '2px',
+                        DEFAULT: '4px',
+                        'md': '8px',
+                        'lg': '12px',
+                        'xl': '16px',
+                        '2xl': '20px',
+                        '3xl': '24px',
+                        'full': '9999px',
+                        'button': '4px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-[1024px]">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-72 bg-white shadow-lg flex flex-col min-h-screen">
+            <div class="p-4 border-b">
+                <h1 class="text-xl font-bold text-gray-800">LLM-SDF</h1>
+            </div>
+            <nav class="p-4 flex-1">
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded hover:bg-gray-100">
+                    <i class="fas fa-home w-6 h-6 flex items-center justify-center"></i>
+                    <span class="ml-3">HOME</span>
+                </a>
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded hover:bg-gray-100">
+                    <i class="fas fa-robot w-6 h-6 flex items-center justify-center"></i>
+                    <span class="ml-3">Coordinator</span>
+                </a>
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded hover:bg-gray-100">
+                    <i class="fas fa-file-pdf w-6 h-6 flex items-center justify-center"></i>
+                    <span class="ml-3">Literature Database</span>
+                </a>
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded hover:bg-gray-100">
+                    <i class="fas fa-images w-6 h-6 flex items-center justify-center"></i>
+                    <span class="ml-3">Figures Input</span>
+                </a>
+            </nav>
+            <div class="p-4">
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded hover:bg-gray-100">
+                    <i class="fas fa-cog w-6 h-6 flex items-center justify-center"></i>
+                    <span class="ml-3">SETTING</span>
+                </a>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 flex">
+            <div class="w-2/5 p-8">
+                <div class="grid grid-cols-2 gap-6">
+                    <!-- Literature Explorer -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-search text-primary text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">Literature Explorer</h3>
+                        </div>
+                    </div>
+                    <!-- Experiment Designer -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-flask text-secondary text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">Experiment Designer</h3>
+                        </div>
+                    </div>
+                    <!-- Circuit Architect -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-microchip text-green-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">Circuit Architect</h3>
+                        </div>
+                    </div>
+                    <!-- Parameter Optimizer -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-tachometer-alt text-red-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">Parameter Optimizer</h3>
+                        </div>
+                    </div>
+                    <!-- Signal Analyst -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-wave-square text-yellow-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">Signal Analyst</h3>
+                        </div>
+                    </div>
+                    <!-- Data Analyst -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-table text-pink-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">Data Analyst</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Dialog -->
+            <div class="w-3/5 bg-white border-l">
+                <div class="flex items-center justify-between border-b p-4">
+                    <h3 class="text-lg font-medium text-gray-900">Chat Assistant</h3>
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="h-[calc(100vh-116px)] p-4 overflow-y-auto">
+                    <div class="flex flex-col space-y-4">
+                        <!-- Assistant Message -->
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                                <i class="fas fa-robot text-xl text-yellow-300"></i>
+                            </div>
+                            <div class="ml-3 bg-gray-100 rounded-lg p-3 max-w-[80%]">
+                                <p class="text-gray-800">Hello! How can I assist you with your experimental design today?</p>
+                            </div>
+                        </div>
+                        <!-- User Message -->
+                        <div class="flex items-start justify-end">
+                            <div class="mr-3 bg-primary text-white rounded-lg p-3 max-w-[80%]">
+                                <p>I found that the measured signal is very small and does not effectively reflect the actual boiling process.</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="fas fa-laugh text-xl text-gray-600"></i>
+                            </div>
+                        </div>
+                        <!-- Assistant Message -->
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                                <i class="fas fa-robot text-xl text-yellow-300"></i>
+                            </div>
+                            <div class="ml-3 bg-gray-100 rounded-lg p-3 max-w-[80%]">
+                                <p class="text-gray-800">I would recommend focusing on the Signal Analyst agent. The Signal Analyst is designed to specialize in the interpretation and understanding of signals in various contexts..</p>
+                            </div>
+                        </div>
+                        <!-- Data Analyst Message -->
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                                <i class="fas fa-wave-square text-yellow-300 text-l"></i>
+                            </div>
+                            <div class="ml-3 bg-gray-100 rounded-lg p-3 max-w-[80%]">
+                                            <p class="text-gray-800"><strong>Strategies for Improving Signal Effectiveness:</strong></p>
+											<ul class="text-gray-800">
+												<li><strong>Signal-to-Noise Ratio Improvement:</strong>
+													<ul>
+														<li><strong>Filtering:</strong> Apply digital filters to remove noise from the signal.</li>
+														<li><strong>Averaging:</strong> Use techniques like moving average or exponential smoothing to reduce random noise.</li>
+													</ul>
+												</li>
+												<li><strong>Signal Amplification:</strong> Increase the gain of the signal if it is too small, ensuring noise is not also amplified.</li>
+												<li><strong>Sensor Calibration and Positioning:</strong>
+													<ul>
+														<li>Ensure sensors are properly calibrated and positioned optimally.</li>
+														<li>Verify the sensitivity range is appropriate for detecting the desired signal intensity.</li>
+													</ul>
+												</li>
+												<li><strong>Advanced Signal Processing Techniques:</strong>
+													<ul>
+														<li>Use Fourier Transform or Wavelet Transform to analyze frequency components.</li>
+														<li>Implement signal reconstruction for better clarity.</li>
+													</ul>
+												</li>
+												<li><strong>Data Validation and Redundancy:</strong>
+													<ul>
+														<li>Implement redundant measurements and cross-verify sensor readings.</li>
+														<li>Validate data against known benchmarks or simulations.</li>
+													</ul>
+												</li>
+												<li><strong>Review the Measurement Setup:</strong>
+													<ul>
+														<li>Check all connections and arrangements for physical issues.</li>
+														<li>Mitigate environmental factors like temperature fluctuations or vibrations.</li>
+													</ul>
+												</li>
+											</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t p-4">
+                    <div class="flex items-center space-x-2">
+                        <input type="text" placeholder="Type your message..." class="flex-1 px-4 py-2 border rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button class="bg-primary text-white p-2 rounded-button hover:bg-primary/90 whitespace-nowrap">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+ 
